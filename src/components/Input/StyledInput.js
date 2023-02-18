@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 10px;
+
+  min-height: 137px;
 `;
 
 export const StyledInp = styled.input`
@@ -21,4 +22,8 @@ export const StyledInp = styled.input`
 
 export const StyledLabel = styled.label`
   text-transform: capitalize;
+`;
+
+export const StyledErrorParagraph = styled.p`
+  color: ${({ theme }) => theme.colors.error};
 `;

@@ -4,9 +4,9 @@ export const StyledForm = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 10px;
   width: 80%;
-  background-color: #e3e3e3;
+  background-color: ${({ theme }) => theme.colors.gray};
   padding: 30px;
   border-radius: 10px;
 `;
