@@ -7,14 +7,16 @@ const UsersList = ({ newUsers }) => {
       <StyledTable>
         <tbody>
           <tr>
+            <th>ID</th>
             <th>Username</th>
             <th>Email</th>
           </tr>
-          {newUsers.map((user) => {
+          {newUsers.map(({ username, email, uid }) => {
             return (
-              <tr key={user.username}>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
+              <tr key={username}>
+                <td>{uid}</td>
+                <td>{username}</td>
+                <td>{email}</td>
               </tr>
             );
           })}

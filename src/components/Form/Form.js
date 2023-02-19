@@ -6,6 +6,7 @@ import UsersList from "../UsersList/UsersList";
 
 export default function Form() {
   const INITIAL_CREDENTIALS = {
+    uid: `${Math.floor(Math.random() * 100000) + 1}`,
     username: "",
     email: "",
     password: "",
@@ -47,9 +48,9 @@ export default function Form() {
         <Input name="email" onChange={handleChange} error={errors.email} value={credentials.email} type="text" />
         <Input name="password" onChange={handleChange} error={errors.password} value={credentials.password} type="password" />
         <Button name="Add" />
-        {JSON.stringify(newUsers)}
+        {/* {JSON.stringify(newUsers)} */}
       </StyledForm>
-      <UsersList newUsers={newUsers} />
+      <UsersList newUsers={newUsers} uid={newUsers.uid} />
     </>
   );
 }
