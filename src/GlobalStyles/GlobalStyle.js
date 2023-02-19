@@ -18,8 +18,10 @@ export const GlobalStyle = createGlobalStyle`
 
   #root {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
     height: 100vh;
   }
 `;
